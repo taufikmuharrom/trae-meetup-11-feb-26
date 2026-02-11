@@ -1,65 +1,91 @@
-import Image from "next/image";
+import { Hero } from "@/components/home/Hero";
+import { ProductGrid, PromoTile } from "@/components/home/ProductGrid";
+import { Carousel } from "@/components/home/Carousel";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <div className="flex flex-col gap-3 bg-white dark:bg-black">
+      {/* Hero 1: iPhone (Generasi Terbaru) */}
+      <Hero
+        title="iPhone"
+        subtitle="Sambut iPhone generasi terbaru."
+        cta1="Selengkapnya"
+        cta2="Beli iPhone"
+        theme="light"
+        backgroundImage="https://images.unsplash.com/photo-1696446702183-cbd133767588?q=80&w=2070&auto=format&fit=crop"
+        className="bg-[#f5f5f7] text-black"
+      />
+
+      {/* Hero 2: iPad Air */}
+      <Hero
+        title="iPad Air"
+        subtitle="Kini bertenaga super berkat chip M3."
+        cta1="Selengkapnya"
+        cta2="Beli"
+        theme="light"
+        backgroundImage="https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=2062&auto=format&fit=crop"
+        className="bg-white"
+      />
+
+      {/* Hero 3: MacBook Pro 14" */}
+      <Hero
+        title='MacBook Pro 14"'
+        subtitle="Bertenaga super berkat M5."
+        cta1="Selengkapnya"
+        cta2="Beli"
+        theme="dark"
+        backgroundImage="https://images.unsplash.com/photo-1517336714731-489689fd1ca4?q=80&w=2026&auto=format&fit=crop"
+        className="bg-black"
+      />
+
+      {/* Grid Section */}
+      <ProductGrid>
+        <PromoTile
+          title="WATCH SERIES 11"
+          subtitle="Tepat untuk memantau kesehatan Anda."
+          theme="light"
+          backgroundImage="https://images.unsplash.com/photo-1546868871-7041f2a55e12?q=80&w=2064&auto=format&fit=crop"
+          className="bg-[#f5f5f7]"
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+        <PromoTile
+          title="AirPods Pro 3"
+          subtitle="Peredam Kebisingan Aktif dalam rungu terbaik di dunia."
+          theme="light"
+          backgroundImage="https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?q=80&w=2070&auto=format&fit=crop"
+          className="bg-[#f5f5f7]"
+        />
+        <PromoTile
+          title="MacBook Air"
+          subtitle="Warna biru langit. Performa setinggi langit dengan M4."
+          theme="light"
+          backgroundImage="https://images.unsplash.com/photo-1521939094609-b034b2f46a65?q=80&w=2070&auto=format&fit=crop"
+          className="bg-[#fbfbfd]"
+        />
+        <PromoTile
+          title="WATCH ULTRA 3"
+          subtitle="Partner tangguh."
+          theme="dark"
+          backgroundImage="https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?q=80&w=2071&auto=format&fit=crop"
+          className="bg-black"
+        />
+        <PromoTile
+          title="WATCH SE 3"
+          subtitle="Cocok. Bicara. Pantau. Sukses."
+          theme="light"
+          backgroundImage="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?q=80&w=2072&auto=format&fit=crop"
+          className="bg-[#f5f5f7]"
+        />
+        <PromoTile
+          title="iPad Pro"
+          subtitle="Performa AI canggih dan kemampuan yang mengubah segalanya."
+          theme="dark"
+          backgroundImage="https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=2062&auto=format&fit=crop"
+          className="bg-black"
+        />
+      </ProductGrid>
+
+      {/* Carousel Section */}
+      <Carousel />
     </div>
   );
 }
